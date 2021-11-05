@@ -1,0 +1,50 @@
+#include<iostream>
+#include<conio.h>
+#include<vector>
+#include<algorithm>
+ 
+
+using namespace std;
+
+bool testMoveMin()
+{
+	vector<int> array;
+	int arr[100];
+	int i, temp;
+	for (i = 0; i < 100; i++)
+	{
+		arr[i] = rand() % 20;
+		 
+	}
+	//for (i = 0; i <  100; i++)
+	{
+		//cout << arr[i];
+	}
+	temp = sizeof(arr) / sizeof(arr[0]);
+
+	sort(arr, arr + temp);
+
+	for (i = 0; i < 100; i++)
+	{
+		array.push_back(arr[i]);
+	}
+
+	for (i = 0; i < array.size(); i++)
+	{
+		cout << array[i] <<" ";
+	}
+	cout << "\n\n";
+	array.push_back(rand()%20);
+	for (i = 0; i < array.size(); i++)
+	{
+		cout << array[i]<<" ";
+	}
+	return true;
+}
+ 
+int main()
+{
+ 
+	testMoveMin();
+	_getch();
+}
